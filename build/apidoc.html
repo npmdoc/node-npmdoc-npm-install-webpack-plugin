@@ -1,0 +1,838 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/ericclemmons/npm-install-webpack-plugin#readme"
+
+    >npm-install-webpack-plugin (v4.0.4)</a>
+</h1>
+<h4>Webpack loader to automatically npm install & save dependencies.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-install-webpack-plugin">module npm-install-webpack-plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.npm-install-webpack-plugin">
+            function <span class="apidocSignatureSpan"></span>npm-install-webpack-plugin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>plugin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>installer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>plugin.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-install-webpack-plugin.installer">module npm-install-webpack-plugin.installer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.installer.check">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>check
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.installer.checkBabel">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>checkBabel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.installer.checkPackage">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>checkPackage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.installer.install">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>install
+            <span class="apidocSignatureSpan">(deps, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>defaultOptions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-install-webpack-plugin.plugin">module npm-install-webpack-plugin.plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.plugin">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>plugin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-install-webpack-plugin.plugin.prototype">module npm-install-webpack-plugin.plugin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.apply">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>apply
+            <span class="apidocSignatureSpan">(compiler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.install">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>install
+            <span class="apidocSignatureSpan">(result)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.preCompile">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>preCompile
+            <span class="apidocSignatureSpan">(compilation, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolve">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(result, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveExternal">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveExternal
+            <span class="apidocSignatureSpan">(context, request, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveLoader">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveLoader
+            <span class="apidocSignatureSpan">(result, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveModule">
+            function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveModule
+            <span class="apidocSignatureSpan">(result, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-install-webpack-plugin" id="apidoc.module.npm-install-webpack-plugin">module npm-install-webpack-plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.npm-install-webpack-plugin" id="apidoc.element.npm-install-webpack-plugin.npm-install-webpack-plugin">
+        function <span class="apidocSignatureSpan"></span>npm-install-webpack-plugin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NpmInstallPlugin(options) {
+  this.preCompiler = null;
+  this.compiler = null;
+  this.options = Object.assign(installer.defaultOptions, options);
+  this.resolving = {};
+
+  installer.checkPackage();
+  installer.checkBabel();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin" id="apidoc.element.npm-install-webpack-plugin.plugin">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>plugin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NpmInstallPlugin(options) {
+  this.preCompiler = null;
+  this.compiler = null;
+  this.options = Object.assign(installer.defaultOptions, options);
+  this.resolving = {};
+
+  installer.checkPackage();
+  installer.checkBabel();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-install-webpack-plugin.installer" id="apidoc.module.npm-install-webpack-plugin.installer">module npm-install-webpack-plugin.installer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.installer.check" id="apidoc.element.npm-install-webpack-plugin.installer.check">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>check
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">check = function (request) {
+  if (!request) {
+    return;
+  }
+
+  var namespaced = request.charAt(0) === &#x22;@&#x22;;
+  var dep = request.split(&#x22;/&#x22;)
+    .slice(0, namespaced ? 2 : 1)
+    .join(&#x22;/&#x22;)
+  ;
+
+  // Ignore relative modules, which aren&#x27;t installed by NPM
+  if (!dep.match(EXTERNAL) &#x26;&#x26; !namespaced) {
+    return;
+  }
+
+  try {
+    var pkgPath = require.resolve(path.join(process.cwd(), &#x22;package.json&#x22;));
+    var pkg = require(pkgPath);
+
+    // Remove cached copy for future checks
+    delete require.cache[pkgPath];
+  } catch(e) {
+    throw e;
+  }
+
+  var hasDep = pkg.dependencies &#x26;&#x26; pkg.dependencies[dep];
+  var hasDevDep = pkg.devDependencies &#x26;&#x26; pkg.devDependencies[dep];
+
+  // Bail early if we&#x27;ve already installed this dependency
+  if (hasDep || hasDevDep) {
+    return;
+  }
+
+  // Ignore linked modules
+  try {
+    var stats = fs.lstatSync(path.join(process.cwd(), &#x22;node_modules&#x22;, dep));
+
+    if (stats.isSymbolicLink()) {
+      return;
+    }
+  } catch(e) {
+    // Module exists in node_modules, but isn&#x27;t symlinked
+  }
+
+  // Ignore NPM global modules (e.g. &#x22;path&#x22;, &#x22;fs&#x22;, etc.)
+  try {
+    var resolved = require.resolve(dep);
+
+    // Global modules resolve to their name, not an actual path
+    if (resolved.match(EXTERNAL)) {
+      return;
+    }
+  } catch(e) {
+    // Module is not resolveable
+  }
+
+  return dep;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return &#x22;babel-plugin-&#x22; + plugin;
+  })).concat(options.env.development.presets.map(function(preset) {
+    return &#x22;babel-preset-&#x22; + preset;
+  }));
+
+  // Check for missing dependencies
+  var missing = deps.filter(function(dep) {
+    return this.<span class="apidocCodeKeywordSpan">check</span>(dep);
+  }.bind(this));
+
+  // Install missing dependencies
+  this.install(missing);
+};
+
+module.exports.checkPackage = function checkPackage() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.installer.checkBabel" id="apidoc.element.npm-install-webpack-plugin.installer.checkBabel">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>checkBabel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkBabel() {
+  try {
+    var babelrc = require.resolve(path.join(process.cwd(), &#x22;.babelrc&#x22;));
+  } catch (e) {
+    // Babel isn&#x27;t installed, don&#x27;t install deps
+    return;
+  }
+
+  // Default plugins/presets
+  var options = Object.assign({
+    plugins: [],
+    presets: [],
+  }, JSON.parse(fs.readFileSync(babelrc, &#x22;utf8&#x22;)));
+
+  if (!options.env) {
+    options.env = {};
+  }
+
+  if (!options.env.development) {
+    options.env.development = {};
+  }
+
+  // Default env.development plugins/presets
+  options.env.development = Object.assign({
+    plugins: [],
+    presets: [],
+  }, options.env.development);
+
+  // Accumulate babel-core (required for babel-loader)+ all dependencies
+  var deps = [&#x22;babel-core&#x22;].concat(options.plugins.map(function(plugin) {
+    return &#x22;babel-plugin-&#x22; + plugin;
+  })).concat(options.presets.map(function(preset) {
+    return &#x22;babel-preset-&#x22; + preset;
+  })).concat(options.env.development.plugins.map(function(plugin) {
+    return &#x22;babel-plugin-&#x22; + plugin;
+  })).concat(options.env.development.presets.map(function(preset) {
+    return &#x22;babel-preset-&#x22; + preset;
+  }));
+
+  // Check for missing dependencies
+  var missing = deps.filter(function(dep) {
+    return this.check(dep);
+  }.bind(this));
+
+  // Install missing dependencies
+  this.install(missing);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.installer.checkPackage" id="apidoc.element.npm-install-webpack-plugin.installer.checkPackage">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>checkPackage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkPackage() {
+  try {
+    require.resolve(path.join(process.cwd(), &#x22;package.json&#x22;));
+
+    return;
+  } catch (e) {
+    // package.json does not exist
+  }
+
+  console.info(&#x22;Initializing `%s`...&#x22;, &#x22;package.json&#x22;);
+  spawn.sync(&#x22;npm&#x22;, [&#x22;init&#x22;, &#x22;-y&#x22;], { stdio: &#x22;inherit&#x22; });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.installer.install" id="apidoc.element.npm-install-webpack-plugin.installer.install">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.installer.</span>install
+        <span class="apidocSignatureSpan">(deps, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function install(deps, options) {
+  if (!deps) {
+    return;
+  }
+
+  if (!Array.isArray(deps)) {
+    deps = [deps];
+  }
+
+  options = Object.assign({}, defaultOptions, options);
+
+  // Ignore known, erroneous modules
+  deps = deps.filter(function(dep) {
+    return erroneous.indexOf(dep) === -1;
+  });
+
+  if (!deps.length) {
+    return;
+  }
+
+  var args = [&#x22;install&#x22;].concat(deps).filter(Boolean);
+
+  args.push(options.dev ? &#x22;--save-dev&#x22; : &#x22;--save&#x22;);
+
+  deps.forEach(function(dep) {
+    console.info(&#x22;Installing %s...&#x22;, dep);
+  });
+
+  // Ignore input, capture output, show errors
+  var output = spawn.sync(&#x22;npm&#x22;, args, {
+    stdio: [&#x22;ignore&#x22;, &#x22;pipe&#x22;, &#x22;inherit&#x22;]
+  });
+
+  if (output.status) {
+    deps.forEach(function(dep) {
+      erroneous.push(dep);
+    });
+  }
+
+  var matches = null;
+  var peers = [];
+
+  // RegExps track return a single result each time
+  while (matches = PEERS.exec(output.stdout)) {
+    var dep = matches[1];
+    var version = matches[2];
+
+    // Ranges don&#x27;t work well, so let NPM pick
+    if (version.match(&#x22; &#x22;)) {
+      peers.push(dep);
+    } else {
+      peers.push(util.format(&#x22;%s@%s&#x22;, dep, version));
+    }
+  }
+
+  if (options.peerDependencies &#x26;&#x26; peers.length) {
+    console.info(&#x22;Installing peerDependencies...&#x22;);
+    this.install(peers, options);
+    console.info(&#x22;&#x22;);
+  }
+
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Check for missing dependencies
+  var missing = deps.filter(function(dep) {
+return this.check(dep);
+  }.bind(this));
+
+  // Install missing dependencies
+  this.<span class="apidocCodeKeywordSpan">install</span>(missing);
+};
+
+module.exports.checkPackage = function checkPackage() {
+  try {
+require.resolve(path.join(process.cwd(), &#x22;package.json&#x22;));
+
+return;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-install-webpack-plugin.plugin" id="apidoc.module.npm-install-webpack-plugin.plugin">module npm-install-webpack-plugin.plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.plugin" id="apidoc.element.npm-install-webpack-plugin.plugin.plugin">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.</span>plugin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NpmInstallPlugin(options) {
+  this.preCompiler = null;
+  this.compiler = null;
+  this.options = Object.assign(installer.defaultOptions, options);
+  this.resolving = {};
+
+  installer.checkPackage();
+  installer.checkBabel();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-install-webpack-plugin.plugin.prototype" id="apidoc.module.npm-install-webpack-plugin.plugin.prototype">module npm-install-webpack-plugin.plugin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.apply" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.apply">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>apply
+        <span class="apidocSignatureSpan">(compiler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (compiler) {
+  this.compiler = compiler;
+
+  // Recursively install missing dependencies so primary build doesn&#x27;t fail
+  compiler.plugin(&#x22;watch-run&#x22;, this.preCompile.bind(this));
+
+  // Install externals that wouldn&#x27;t normally be resolved
+  if (Array.isArray(compiler.options.externals)) {
+    compiler.options.externals.unshift(this.resolveExternal.bind(this));
+  }
+
+  // Install loaders on demand
+  compiler.resolvers.loader.plugin(&#x22;module&#x22;, this.resolveLoader.bind(this));
+
+  // Install project dependencies on demand
+  compiler.resolvers.normal.plugin(&#x22;module&#x22;, this.resolveModule.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.install" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.install">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>install
+        <span class="apidocSignatureSpan">(result)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (result) {
+  if (!result) {
+    return;
+  }
+
+  var dep = installer.check(result.request);
+
+  if (dep) {
+    var dev = this.options.dev;
+
+    if (typeof this.options.dev === &#x22;function&#x22;) {
+      dev = !!this.options.dev(result.request, result.path);
+    }
+
+    installer.install(dep, Object.assign({}, this.options, { dev: dev }));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Check for missing dependencies
+  var missing = deps.filter(function(dep) {
+return this.check(dep);
+  }.bind(this));
+
+  // Install missing dependencies
+  this.<span class="apidocCodeKeywordSpan">install</span>(missing);
+};
+
+module.exports.checkPackage = function checkPackage() {
+  try {
+require.resolve(path.join(process.cwd(), &#x22;package.json&#x22;));
+
+return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.preCompile" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.preCompile">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>preCompile
+        <span class="apidocSignatureSpan">(compilation, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preCompile = function (compilation, next) {
+  if (!this.preCompiler) {
+    var options = this.compiler.options;
+    var config = Object.assign(
+      // Start with new config object
+      {},
+      // Inherit the current config
+      options,
+      {
+        // Ensure fresh cache
+        cache: {},
+        // Register plugin to install missing deps
+        plugins: [
+          new NpmInstallPlugin(this.options),
+        ],
+      }
+    );
+
+    this.preCompiler = webpack(config);
+    this.preCompiler.outputFileSystem = new MemoryFS();
+  }
+
+  this.preCompiler.run(next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolve" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolve">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(result, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (result, callback) {
+  var version = require(&#x22;webpack/package.json&#x22;).version;
+  var major = version.split(&#x22;.&#x22;).shift();
+
+  if (major === &#x22;1&#x22;) {
+    return this.compiler.resolvers.normal.resolve(
+      result.path,
+      result.request,
+      callback
+    );
+  }
+
+  if (major === &#x22;2&#x22;) {
+    return this.compiler.resolvers.normal.resolve(
+      result.context || {},
+      result.path,
+      result.request,
+      callback
+    );
+  }
+
+  throw new Error(&#x22;Unsupport Webpack version: &#x22; + version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Ignore relative modules, which aren&#x27;t installed by NPM
+if (!dep.match(EXTERNAL) &#x26;&#x26; !namespaced) {
+  return;
+}
+
+try {
+  var pkgPath = require.<span class="apidocCodeKeywordSpan">resolve</span>(path.join(process.cwd(), &#x22;package.json&#x22;));
+  var pkg = require(pkgPath);
+
+  // Remove cached copy for future checks
+  delete require.cache[pkgPath];
+} catch(e) {
+  throw e;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveExternal" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveExternal">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveExternal
+        <span class="apidocSignatureSpan">(context, request, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveExternal = function (context, request, callback) {
+  // Only install direct dependencies, not sub-dependencies
+  if (context.match(&#x22;node_modules&#x22;)) {
+    return callback();
+  }
+
+  // Ignore !!bundle?lazy!./something
+  if (request.match(/(\?|\!)/)) {
+    return callback();
+  }
+
+  var result = {
+    context: {},
+    path: context,
+    request: request,
+  };
+
+  this.resolve(result, function(err, filepath) {
+    if (err) {
+      this.install(Object.assign({}, result, { request: depFromErr(err) }));
+    }
+
+    callback();
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveLoader" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveLoader">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveLoader
+        <span class="apidocSignatureSpan">(result, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveLoader = function (result, next) {
+  // Ensure loaders end with `-loader` (e.g. `babel` =&#x3e; `babel-loader`)
+  // Also force Webpack2&#x27;s duplication of `-loader` to a single occurrence
+  var loader = result.request // e.g. react-hot-loader/webpack
+      .split(&#x22;/&#x22;)             // [&#x22;react-hot-loader&#x22;, &#x22;webpack&#x22;]
+      .shift()                // &#x22;react-hot-loader&#x22;
+      .split(&#x22;-loader&#x22;)       // [&#x22;react-hot&#x22;, &#x22;&#x22;]
+      .shift()                // &#x22;react-hot&#x22;
+      .concat(&#x22;-loader&#x22;)       // &#x22;react-hot-loader&#x22;
+  ;
+
+  this.install(Object.assign({}, result, { request: loader }));
+
+  return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveModule" id="apidoc.element.npm-install-webpack-plugin.plugin.prototype.resolveModule">
+        function <span class="apidocSignatureSpan">npm-install-webpack-plugin.plugin.prototype.</span>resolveModule
+        <span class="apidocSignatureSpan">(result, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveModule = function (result, next) {
+  // Only install direct dependencies, not sub-dependencies
+  if (result.path.match(&#x22;node_modules&#x22;)) {
+    return next();
+  }
+
+  if (this.resolving[result.request]) {
+    return next();
+  }
+
+  this.resolving[result.request] = true;
+
+  this.resolve(result, function(err, filepath) {
+    this.resolving[result.request] = false;
+
+    if (err) {
+      this.install(Object.assign({}, result, { request: depFromErr(err) }));
+    }
+
+    return next();
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
